@@ -1,0 +1,358 @@
+{
+  "categories": [
+    {
+      "id": 1,
+      "nama": "Makanan"
+    },
+    {
+      "id": 2,
+      "nama": "Minuman"
+    },
+    {
+      "id": 3,
+      "nama": "Cemilan"
+    }
+  ],
+  "products": [
+    {
+      "id": 1,
+      "kode": "K-01",
+      "nama": "Tokpoki",
+      "harga": 30000,
+      "is_ready": true,
+      "gambar": "Tokpoki.jpeg",
+      "category": {
+        "id": 1,
+        "nama": "Makanan"
+      }
+    },
+    {
+      "id": 2,
+      "kode": "K-02",
+      "nama": "Rapoki",
+      "harga": 42000,
+      "is_ready": true,
+      "gambar": "Rapoki.jpeg",
+      "category": {
+        "id": 1,
+        "nama": "Makanan"
+      }
+    },
+    {
+      "id": 3,
+      "kode": "K-03",
+      "nama": "Odeng",
+      "harga": 15000,
+      "is_ready": true,
+      "gambar": "Odeng.jpeg",
+      "category": {
+        "id": 1,
+        "nama": "Makanan"
+      }
+    },
+    {
+      "id": 4,
+      "kode": "K-04",
+      "nama": "Shin Ramen",
+      "harga": 36000,
+      "is_ready": true,
+      "gambar": "ShinRamen.jpeg",
+      "category": {
+        "id": 1,
+        "nama": "Makanan"
+      }
+    },
+    {
+      "id": 5,
+      "kode": "K-05",
+      "nama": "Buldak Ramen",
+      "harga": 42000,
+      "is_ready": true,
+      "gambar": "BuldakRamen.jpeg",
+      "category": {
+        "id": 1,
+        "nama": "Makanan"
+      }
+    },
+    {
+      "id": 6,
+      "kode": "K-06",
+      "nama": "Rice Ball",
+      "harga": 12000,
+      "is_ready": true,
+      "gambar": "RiceBall.jpeg",
+      "category": {
+        "id": 1,
+        "nama": "Makanan"
+      }
+    },
+    {
+      "id": 7,
+      "kode": "K-07",
+      "nama": "Kimbab OR",
+      "harga": 36000,
+      "is_ready": true,
+      "gambar": "Kimbab.jpeg",
+      "category": {
+        "id": 1,
+        "nama": "Makanan"
+      }
+    },
+    {
+      "id": 8,
+      "kode": "K-08",
+      "nama": "Kimbab Rendang",
+      "harga": 42000,
+      "is_ready": true,
+      "gambar": "KimbabRendang.jpeg",
+      "category": {
+        "id": 1,
+        "nama": "Makanan"
+      }
+    },
+    {
+      "id": 9,
+      "kode": "K-09",
+      "nama": "Kimbab Tuna",
+      "harga": 42000,
+      "is_ready": true,
+      "gambar": "KimbabTuna.jpeg",
+      "category": {
+        "id": 1,
+        "nama": "Makanan"
+      }
+    },
+    {
+      "id": 10,
+      "kode": "K-10",
+      "nama": "Ceker & Rice Ball",
+      "harga": 42000,
+      "is_ready": true,
+      "gambar": "KimbabTuna.jpeg",
+      "category": {
+        "id": 1,
+        "nama": "Makanan"
+      }
+    },
+    {
+      "id": 11,
+      "kode": "K-11",
+      "nama": "Syrup Markisa",
+      "harga": 50000,
+      "is_ready": true,
+      "gambar": "SyrupMarkisa.jpeg",
+      "category": {
+        "id": 2,
+        "nama": "Minuman"
+      }
+    },
+    {
+      "id": 12,
+      "kode": "K-12",
+      "nama": "Jus Markisa",
+      "harga": 18000,
+      "is_ready": true,
+      "gambar": "JusMarkisa.jpeg",
+      "category": {
+        "id": 2,
+        "nama": "Minuman"
+      }
+    },
+    {
+      "id": 13,
+      "kode": "K-13",
+      "nama": "Ice Coffe",
+      "harga": 30000,
+      "is_ready": true,
+      "gambar": "IceCoffe.jpeg",
+      "category": {
+        "id": 2,
+        "nama": "Minuman"
+      }
+    },
+    {
+      "id": 14,
+      "kode": "K-14",
+      "nama": "Hot Coffe",
+      "harga": 30000,
+      "is_ready": true,
+      "gambar": "HotCoffe.jpeg",
+      "category": {
+        "id": 2,
+        "nama": "Minuman"
+      }
+    },
+    {
+      "id": 15,
+      "kode": "K-15",
+      "nama": "Coffe Murni",
+      "harga": 50000,
+      "is_ready": true,
+      "gambar": "CoffeMurni.jpeg",
+      "category": {
+        "id": 2,
+        "nama": "Minuman"
+      }
+    },
+    {
+      "id": 16,
+      "kode": "K-16",
+      "nama": "Dalgona",
+      "harga": 15000,
+      "is_ready": true,
+      "gambar": "Dalgona.jpeg",
+      "category": {
+        "id": 3,
+        "nama": "Cemilan"
+      }
+    },
+    {
+      "id": 17,
+      "kode": "K-17",
+      "nama": "Kimali",
+      "harga": 5000,
+      "is_ready": true,
+      "gambar": "Kimali.jpeg",
+      "category": {
+        "id": 3,
+        "nama": "Cemilan"
+      }
+    },
+    {
+      "id": 18,
+      "kode": "K-18",
+      "nama": "Mandu",
+      "harga": 5000,
+      "is_ready": true,
+      "gambar": "Mandu.jpeg",
+      "category": {
+        "id": 3,
+        "nama": "Cemilan"
+      }
+    },
+    {
+      "id": 19,
+      "kode": "K-19",
+      "nama": "Kimchi",
+      "harga": 12000,
+      "is_ready": true,
+      "gambar": "Kimchi.jpeg",
+      "category": {
+        "id": 3,
+        "nama": "Cemilan"
+      }
+    }
+  ],
+  "keranjangs": [
+    {
+      "jumlah": 1,
+      "total_harga": 42000,
+      "product": {
+        "id": 2,
+        "kode": "K-02",
+        "nama": "Rapoki",
+        "harga": 42000,
+        "is_ready": true,
+        "gambar": "Rapoki.jpeg",
+        "category": {
+          "id": 1,
+          "nama": "Makanan"
+        }
+      },
+      "id": 1
+    },
+    {
+      "jumlah": 1,
+      "total_harga": 15000,
+      "product": {
+        "id": 3,
+        "kode": "K-03",
+        "nama": "Odeng",
+        "harga": 15000,
+        "is_ready": true,
+        "gambar": "Odeng.jpeg",
+        "category": {
+          "id": 1,
+          "nama": "Makanan"
+        }
+      },
+      "id": 2
+    },
+    {
+      "jumlah": 1,
+      "total_harga": 42000,
+      "product": {
+        "id": 5,
+        "kode": "K-05",
+        "nama": "Buldak Ramen",
+        "harga": 42000,
+        "is_ready": true,
+        "gambar": "BuldakRamen.jpeg",
+        "category": {
+          "id": 1,
+          "nama": "Makanan"
+        }
+      },
+      "id": 3
+    },
+    {
+      "jumlah": 1,
+      "total_harga": 12000,
+      "product": {
+        "id": 6,
+        "kode": "K-06",
+        "nama": "Rice Ball",
+        "harga": 12000,
+        "is_ready": true,
+        "gambar": "RiceBall.jpeg",
+        "category": {
+          "id": 1,
+          "nama": "Makanan"
+        }
+      },
+      "id": 4
+    }
+  ],
+  "pesanans": [
+    {
+      "total_bayar": 72000,
+      "menus": [
+        {
+          "jumlah": 2,
+          "total_harga": 30000,
+          "product": {
+            "id": 3,
+            "kode": "K-03",
+            "nama": "Odeng",
+            "harga": 15000,
+            "is_ready": true,
+            "gambar": "Odeng.jpeg",
+            "category": {
+              "id": 1,
+              "nama": "Makanan"
+            }
+          },
+          "id": 2
+        },
+        {
+          "jumlah": 1,
+          "total_harga": 42000,
+          "product": {
+            "id": 2,
+            "kode": "K-02",
+            "nama": "Rapoki",
+            "harga": 42000,
+            "is_ready": true,
+            "gambar": "Rapoki.jpeg",
+            "category": {
+              "id": 1,
+              "nama": "Makanan"
+            }
+          },
+          "id": 3
+        }
+      ],
+      "id": 1
+    }
+  ]
+}
