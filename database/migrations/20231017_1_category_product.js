@@ -3,7 +3,7 @@
  * @returns { Promise<void> }
  */
 exports.up = function(knex) {
-    return knex.schema.createTableIfNotExists("roles",function(table){
+    return knex.schema.createTableIfNotExists("category_product",function(table){
       table.increments();
       table.text("name").defaultTo(null);
       table.text("description").defaultTo(null);
@@ -18,5 +18,5 @@ exports.up = function(knex) {
    * @returns { Promise<void> }
    */
   exports.down = function(knex) {
-    return knex.schema.dropTableIfExists("roles");
+    return knex.schema.dropTableIfExists("category_product");
   };

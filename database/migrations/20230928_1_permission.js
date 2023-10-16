@@ -4,7 +4,7 @@
  */
 exports.up = function(knex) {
     return knex.schema.createTableIfNotExists("permission",function(table){
-      table.bigIncrements();
+      table.increments();
       table.text("name").defaultTo(null);
       table.text("description").defaultTo(null);
       table.timestamp("created_at").defaultTo(knex.fn.now());
