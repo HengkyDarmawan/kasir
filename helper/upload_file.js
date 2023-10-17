@@ -25,8 +25,7 @@ const config_avatar = {
 
 const storage_avatar = multer.diskStorage({
     destination: function (req, file, cb) {
-        let path_folder = __dirname.split("\\");
-        path_folder = path.join(path_folder.slice(0, path_folder.length - 1).join("/"));
+        let path_folder = global.root_dir;
         cb(null, path.join(path_folder + '/uploaded'))
     },
     filename: function (req, file, cb) {
@@ -44,11 +43,11 @@ const upload_avatar = multer({ storage: storage_avatar, fileFilter: config_avata
 // upload avatar
 
 // upload news
-let file_bytes_news_image=500;
-let file_size_news_image=file_bytes_news_image*1024; // 300kb
+let file_bytes_product_image=500;
+let file_size_product_image=file_bytes_product_image*1024; // 300kb
 
-const config_news_image = {
-    fileSize: file_size_news_image, // 500000(5e+5) = 500 Kb, 1000000(1e+6) = 1mb
+const config_product_image = {
+    fileSize: file_size_product_image, // 500000(5e+5) = 500 Kb, 1000000(1e+6) = 1mb
     fileFilter: function (req, file, callback) {
         let fileSize = parseInt(req.headers['content-length']);
         let mimetype=["image/png","image/jpg","image/jpeg"];
@@ -56,19 +55,18 @@ const config_news_image = {
             !mimetype.includes(file.mimetype)
         ) {
            return callback(new Error("File : Only images are allowed"),false);
-        }else if (fileSize > file_size_news_image) {
-            return callback(new Error(`File : Maximum photo size ${Math.round(file_size_news_image/1024)} kb`),false);
+        }else if (fileSize > file_size_product_image) {
+            return callback(new Error(`File : Maximum photo size ${Math.round(file_size_product_image/1024)} kb`),false);
         }else{
             return callback(null, true);
         }
     },
 }
 
-const storage_news_image = multer.diskStorage({
+const storage_product_image = multer.diskStorage({
     destination: function (req, file, cb) {
-        let path_folder = __dirname.split("\\");
-        path_folder = path.join(path_folder.slice(0, path_folder.length - 1).join("/"));
-        cb(null, path.join(path_folder + '/uploaded'))
+        let path_folder = global.root_dir;
+        cb(null, path.join(path_folder, 'uploaded'))
     },
     filename: function (req, file, cb) {
         let hash = crypto.createHash('md5');
@@ -76,14 +74,14 @@ const storage_news_image = multer.diskStorage({
         format_file=format_file[format_file.length-1];
         // Generate a random hex string with 8 characters
         const randomHex = [...Array(32)].map(() => Math.floor(Math.random() * 16).toString(16)).join('');
-        let news_image_name=`${hash.update(`news_image_${randomHex}_${1}`).digest("hex")}.${format_file}`;
-        cb(null,news_image_name);
+        let product_image_name=`${hash.update(`product_image_${randomHex}_${1}`).digest("hex")}.${format_file}`;
+        cb(null,product_image_name);
     }
 });
 
-const upload_news_image = multer({ storage: storage_news_image, fileFilter: config_news_image.fileFilter, limits: { fileSize: config_news_image.fileSize } });
+const upload_product_image = multer({ storage: storage_product_image, fileFilter: config_product_image.fileFilter, limits: { fileSize: config_product_image.fileSize } });
 // upload news
 
 module.exports = {
-    upload_avatar,upload_news:upload_news_image
+    upload_avatar,upload_product:upload_product_image
 };
