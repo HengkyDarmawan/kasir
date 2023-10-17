@@ -37,7 +37,7 @@ module.exports = {
             await services.createProduct({
                 payload: {
                     name, harga, id_category_product, is_ready:1, created_by:id_users,
-                    kode:`P-${helper_function.getRandomFloat(1000,9999)}-${helper_function.getRandomFloat(100,999)}`,
+                    kode:`P-${parseInt(helper_function.getRandomFloat(1000,9999))}-${parseInt(helper_function.getRandomFloat(100,999))}`,
                     gambar: `http://localhost:8000/api/v1/uploads/image/${filename}`
                 }
             });
