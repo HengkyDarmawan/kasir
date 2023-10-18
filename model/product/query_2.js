@@ -7,7 +7,7 @@ module.exports={
         let offset=query_helper.parsePageToOffset({page,limit})
 
         let select=[
-            "product.id","product.kode","product.harga","product.is_ready","product.gambar",
+            "product.id","product.name","product.kode","product.harga","product.is_ready","product.gambar",
             knex_pg.raw("json_build_object('id',cp.id,'name',cp.name) as category"),
             "product.created_at","product.updated_at"
         ];

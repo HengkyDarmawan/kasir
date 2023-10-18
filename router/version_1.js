@@ -7,5 +7,6 @@ router.use("/permission",require("./permissions/route"));
 router.use("/category_product",require("./category_product/route"));
 router.use("/product",require("./product/route"));
 router.use("/uploads",require("./upload_file/route"));
+router.use("/cart",require("./keranjang/route"));
 
 module.exports=router;

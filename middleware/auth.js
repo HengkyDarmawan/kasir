@@ -8,16 +8,8 @@ const response = require("../helper/response");
 module.exports = {
 
     authjwt:(req,res,next)=>{
-        // const token = req.headers.authorization?.split(' ')[1];
-        const authorization = req.headers.authorization || "";
-        let token = authorization.replace("Basic ", "");
-        token = token.replace("Bearer ", "");
+        const token = req.headers.authorization?.split(' ')[1];
         verifytoken(token, async(err, payload) => {
-            // await m_log_trace.createLogTrace({
-            //     name:"log token",
-            //     description:`${token} ? ${err}`
-            // });
-            // console.log(payload);
             if (err) {
                 return response.unauthorized({
                     isTokenExpired: true
