@@ -11,7 +11,7 @@ module.exports={
             knex_pg.raw("coalesce(json_agg(json_build_object('id',roles.id,'name',roles.name)) filter(where roles.id is not null),'[]') as roles")
         ];
         
-        let query=knex_pg.from("users");
+        let query=knex_pg.select(select).from("users");
 
         query.leftJoin("users_roles as ur","ur.id_users","users.id");
         query.leftJoin("roles","roles.id","ur.id_roles");
@@ -23,12 +23,13 @@ module.exports={
         if(email){
             query.whereILike('users.email',`%${email}%`);
         }
+
         query.groupBy("users.id");
 
         let count = 0;
         
         if (limit) {
-            let queryCountData = knex_pg.count("* as count").from(query.count(knex_pg.raw("distinct "+groupby)).as("distinct"));
+            let queryCountData = knex_pg.count("* as count").from(query.as("counts"));
             // console.log(queryCountData.toQuery());
             // console.log(await queryCountData);
             count = (await queryCountData)[0].count;
@@ -39,8 +40,6 @@ module.exports={
             query.offset(offset);
         }
         
-        query.clearSelect().select(select);
-
         let datas = await query;
 
         let result = {
