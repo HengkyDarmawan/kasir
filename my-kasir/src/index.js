@@ -5,9 +5,13 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+import ReduxState from './stores';
+
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <ReduxState>
+      <App />
+    </ReduxState>
   </React.StrictMode>,
   document.getElementById('root')
 );
