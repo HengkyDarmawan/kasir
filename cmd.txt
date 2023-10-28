@@ -1,0 +1,16 @@
+cd C:\Program Files\PostgreSQL\12\bin
+// table only
+pg_dump -U postgres -d evmon -p 5433 -f C:\Users\handr\MyWork\be-pemilu\pemilu.sql
+
+// data only
+pg_dump -U postgres -d evmon -p 5433 -f C:\Users\handr\MyWork\be-pemilu\pemilu_data.sql --data-only
+
+// insert only
+psql -h localhost -p 5432 -U postgres -f C:\Users\handr\MyWork\script_excel_pemilu\kursi.sql pemilu
+
+// dump database
+pg_dump -U postgres -d evmon -p 5432 -O -x -f C:\Users\handr\MyWork\evmon\evmon.sql
+
+// multi table only
+pg_dump -U postgres -d evmon -p 5433 -t user -t partai -t wilayah -O -x -f C:\Users\handr\MyWork\evmon\evmon.sql
+

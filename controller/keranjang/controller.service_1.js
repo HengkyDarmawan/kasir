@@ -28,4 +28,24 @@ keranjang.listKeranjang=async({id_users})=>{
     }
 };
 
+keranjang.findOneKeranjang=async({id_users,id_product})=>{
+    try {
+        
+        return query.findOneKeranjang({id_users,id_product})
+
+    } catch (error) {
+        throw error;
+    }
+};
+
+keranjang.deleteToCart=async({id_users,id_product})=>{
+    try {
+        
+        return query.deleteCart({id_users,id_product})
+
+    } catch (error) {
+        throw error;
+    }
+};
+
 module.exports=keranjang;

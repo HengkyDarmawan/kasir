@@ -6,6 +6,7 @@ exports.up = function(knex) {
     return knex.schema.createTableIfNotExists("keranjang",function(table){
       table.integer("jumlah").defaultTo(0);
       table.integer("id_product").references("id").inTable("product").notNullable();
+      table.text("description").defaultTo(null);
       table.bigInteger("created_by").references("id").inTable("users").defaultTo(null);
       table.timestamp("created_at").defaultTo(knex.fn.now());
       table.timestamp("updated_at").defaultTo(knex.fn.now());

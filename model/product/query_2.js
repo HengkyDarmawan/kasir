@@ -30,7 +30,7 @@ module.exports={
         }
 
         if(product_category){
-            query.whereILike('cp.name',`%${product_category}%`);
+            query.where(knex_pg.raw('lower(cp.name)'),'=',product_category);
         }
 
 

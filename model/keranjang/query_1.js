@@ -26,12 +26,14 @@ module.exports={
                 message:"Unknown users"
             })
         }
-        payload={
-            ...payload,
-            created_by:id_users
-        }
         await knex_pg.transaction(async(trx)=>{
-            await trx("keranjang").where({'id_product':id_product}).update(payload).returning("*");
+            await trx("keranjang").where({'id_product':id_product,'created_by':id_users}).update(payload).returning("*");
+        });
+    },
+
+    deleteCart:async({id_product,id_users})=>{
+        await knex_pg.transaction(async(trx)=>{
+            await trx("keranjang").where({'id_product':id_product,'created_by':id_users}).del();
         });
     }
     
