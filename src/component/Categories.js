@@ -5,9 +5,9 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {faUtensils, faHamburger, faGlassMartini, faCookie } from '@fortawesome/free-solid-svg-icons';
 
 const Icon = ({nama}) => {
-    if(nama == "Makanan") return <FontAwesomeIcon icon={faHamburger} className="mr-2" width={2}/>
-    if(nama == "Minuman") return <FontAwesomeIcon icon={faGlassMartini}/>
-    if(nama == "Cemilan") return <FontAwesomeIcon icon={faCookie} className="mr-2"/>
+    if(nama === "Makanan") return <FontAwesomeIcon icon={faHamburger} className="mr-2" width={2}/>
+    if(nama === "Minuman") return <FontAwesomeIcon icon={faGlassMartini}/>
+    if(nama === "Cemilan") return <FontAwesomeIcon icon={faCookie} className="mr-2"/>
     return <FontAwesomeIcon icon={faUtensils} className="mr-2"/>
 }
 
