@@ -1,5 +1,6 @@
 const service=require("./controller.service_1");
 const response=require("../../helper/response");
+const { series } = require("async");
 
 module.exports={
 
@@ -30,6 +31,22 @@ module.exports={
             return response.error({},res,error.message);
         }
 
+    },
+
+    getUsers:async(req,res) => {
+        try {
+            
+            const id_users=req.decoded.id;
+
+            let payload=await service.getUsers({id_users});
+
+            return response.ok({
+                payload
+            },res);
+
+        } catch (error) {
+            return response.error({},res);
+        }
     }
 
 };

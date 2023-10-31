@@ -27,9 +27,17 @@ users.login=async({email,password})=>{
         return null;
 
     } catch (error) {
-        return response.error({},res,error.message);
+        throw error;
     }
 
 }
+
+users.getUsers=async({id_users})=>{
+    try {
+        return query.getUsers({id_users});
+    } catch (error) {
+        throw error;
+    }
+};
 
 module.exports=users;
