@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import { Col, ListGroup } from 'react-bootstrap';import { API_URL } from "../utils/constants";
+import { Col, ListGroup } from 'react-bootstrap';
+import { API_URL } from "../utils/constants";
 import axios from 'axios';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {faUtensils, faHamburger, faGlassMartini, faCookie } from '@fortawesome/free-solid-svg-icons';
@@ -20,9 +21,9 @@ export default class Categories extends Component {
         }
     }
     componentDidMount(){
-        axios.get(API_URL+"categories")
+        axios.get(API_URL+"category_product")
             .then(res => {
-            const categories = res.data;
+            const categories = res.data.result.payload.data;
             this.setState({ categories });
             })
             .catch(error => [
@@ -36,8 +37,8 @@ export default class Categories extends Component {
             <Col mt="3">
                 <ListGroup className='justify-content-center content-category my-2' horizontal>
                     {categories && categories.map((category) => (
-                        <ListGroup.Item key={category.id} onClick={() => changeCategory(category.nama)} className={categoriYangDipilih === category.nama && "category-aktif"}>
-                                <Icon nama={category.nama}/> {category.nama}
+                        <ListGroup.Item key={category.id} onClick={() => changeCategory(category.name)} className={categoriYangDipilih === category.name && "category-aktif"}>
+                                <Icon nama={category.name}/> {category.name}
                         </ListGroup.Item>
                     ))}
                 </ListGroup>
