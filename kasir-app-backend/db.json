@@ -245,8 +245,44 @@
         "id": 3,
         "nama": "Cemilan"
       }
+    },
+    {
+      "id": 20,
+      "kode": "K-20",
+      "nama": "BBQ",
+      "harga": 12000,
+      "is_ready": true,
+      "gambar": "Kimchi.jpg",
+      "category": {
+        "id": 3,
+        "nama": "hot"
+      }
     }
   ],
   "keranjangs": [],
-  "pesanans": []
+  "pesanans": [
+    {
+      "total_bayar": 42000,
+      "menus": [
+        {
+          "jumlah": 1,
+          "total_harga": 42000,
+          "product": {
+            "id": 2,
+            "kode": "K-02",
+            "nama": "Rapoki",
+            "harga": 42000,
+            "is_ready": true,
+            "gambar": "Rapoki.jpeg",
+            "category": {
+              "id": 1,
+              "nama": "Makanan"
+            }
+          },
+          "id": 1
+        }
+      ],
+      "id": 1
+    }
+  ]
 }
